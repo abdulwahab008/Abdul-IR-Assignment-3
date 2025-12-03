@@ -419,119 +419,119 @@ The following screenshots document the AI-assisted development process:
 ---
 
 #### Figure A1: Initial Project Request
-![Screenshot 1](ai_screenshots/Screenshot%202025-12-03%20at%205.45.10%20PM.png)
+![Screenshot 1](ai_screenshots/screenshot_01.png)
 
 *Initial prompt requesting creation of complete IR system for CS 516 assignment.*
 
 ---
 
 #### Figure A2: System Architecture Discussion
-![Screenshot 2](ai_screenshots/Screenshot%202025-12-03%20at%205.52.17%20PM.png)
+![Screenshot 2](ai_screenshots/screenshot_02.png)
 
 *Discussion of system components and architecture design.*
 
 ---
 
 #### Figure A3: Preprocessing Implementation
-![Screenshot 3](ai_screenshots/Screenshot%202025-12-03%20at%205.52.55%20PM.png)
+![Screenshot 3](ai_screenshots/screenshot_03.png)
 
 *AI generating preprocessing pipeline with tokenization, stemming, and stopword removal.*
 
 ---
 
 #### Figure A4: Indexing and BM25 Implementation
-![Screenshot 4](ai_screenshots/Screenshot%202025-12-03%20at%205.53.06%20PM.png)
+![Screenshot 4](ai_screenshots/screenshot_04.png)
 
 *Implementation of inverted index structure and BM25 scoring algorithm.*
 
 ---
 
 #### Figure A5: Retrieval Module Development
-![Screenshot 5](ai_screenshots/Screenshot%202025-12-03%20at%205.53.14%20PM.png)
+![Screenshot 5](ai_screenshots/screenshot_05.png)
 
 *Development of retrieval engine with multiple scoring methods.*
 
 ---
 
 #### Figure A6: Dataset Integration
-![Screenshot 6](ai_screenshots/Screenshot%202025-12-03%20at%205.55.48%20PM.png)
+![Screenshot 6](ai_screenshots/screenshot_06.png)
 
 *Integration of Kaggle News Articles dataset with the system.*
 
 ---
 
 #### Figure A7: Index Building Process
-![Screenshot 7](ai_screenshots/Screenshot%202025-12-03%20at%205.55.58%20PM.png)
+![Screenshot 7](ai_screenshots/screenshot_07.png)
 
 *Building the inverted index from 2,692 news articles.*
 
 ---
 
 #### Figure A8: Search Testing - BM25
-![Screenshot 8](ai_screenshots/Screenshot%202025-12-03%20at%205.56.07%20PM.png)
+![Screenshot 8](ai_screenshots/screenshot_08.png)
 
 *Testing BM25 search functionality with sample queries.*
 
 ---
 
 #### Figure A9: Search Testing - Boolean
-![Screenshot 9](ai_screenshots/Screenshot%202025-12-03%20at%205.56.18%20PM.png)
+![Screenshot 9](ai_screenshots/screenshot_09.png)
 
 *Testing Boolean retrieval (AND/OR/NOT operators).*
 
 ---
 
 #### Figure A10: Evaluation Metrics Implementation
-![Screenshot 10](ai_screenshots/Screenshot%202025-12-03%20at%205.56.28%20PM.png)
+![Screenshot 10](ai_screenshots/screenshot_10.png)
 
 *Implementation of evaluation metrics (Precision, Recall, MAP, MRR, NDCG).*
 
 ---
 
 #### Figure A11: System Evaluation Results
-![Screenshot 11](ai_screenshots/Screenshot%202025-12-03%20at%205.56.39%20PM.png)
+![Screenshot 11](ai_screenshots/screenshot_11.png)
 
 *Running system evaluation and analyzing results.*
 
 ---
 
 #### Figure A12: Technical Report Generation
-![Screenshot 12](ai_screenshots/Screenshot%202025-12-03%20at%205.56.46%20PM.png)
+![Screenshot 12](ai_screenshots/screenshot_12.png)
 
 *AI assistance in generating technical report content.*
 
 ---
 
 #### Figure A13: Evaluation Results Analysis
-![Screenshot 13](ai_screenshots/Screenshot%202025-12-03%20at%205.56.58%20PM.png)
+![Screenshot 13](ai_screenshots/screenshot_13.png)
 
 *Detailed analysis of evaluation metrics across different scoring methods.*
 
 ---
 
 #### Figure A14: Report Updates
-![Screenshot 14](ai_screenshots/Screenshot%202025-12-03%20at%205.57.06%20PM.png)
+![Screenshot 14](ai_screenshots/screenshot_14.png)
 
 *Updating technical report with actual results and statistics.*
 
 ---
 
 #### Figure A15: Code Explanation
-![Screenshot 15](ai_screenshots/Screenshot%202025-12-03%20at%205.57.14%20PM.png)
+![Screenshot 15](ai_screenshots/screenshot_15.png)
 
 *AI explaining preprocessing, indexing, and retrieval concepts.*
 
 ---
 
 #### Figure A16: Final Verification
-![Screenshot 16](ai_screenshots/Screenshot%202025-12-03%20at%205.57.24%20PM.png)
+![Screenshot 16](ai_screenshots/screenshot_16.png)
 
 *Final verification of system functionality and completeness.*
 
 ---
 
 #### Figure A17: Project Finalization
-![Screenshot 17](ai_screenshots/Screenshot%202025-12-03%20at%205.57.33%20PM.png)
+![Screenshot 17](ai_screenshots/screenshot_17.png)
 
 *Finalizing project structure and preparing for submission.*
 
