@@ -1,0 +1,3 @@
+Query Processing in Search Engines
+
+Query processing involves analyzing and transforming a user query into a form that can be matched against the index. Steps include parsing the query, applying the same preprocessing as documents, expanding queries with synonyms, and formulating the retrieval model query. Efficient query processing is crucial for search engine performance.

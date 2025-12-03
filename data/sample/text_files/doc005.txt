@@ -1,0 +1,3 @@
+Boolean Retrieval Model
+
+The Boolean retrieval model is an information retrieval model in which queries are specified using Boolean operators AND, OR, and NOT. Documents are retrieved if they satisfy the Boolean expression. This model is precise but does not support ranking. Boolean retrieval was one of the first information retrieval models developed.

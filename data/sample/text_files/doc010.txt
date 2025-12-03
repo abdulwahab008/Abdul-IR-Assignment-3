@@ -1,0 +1,3 @@
+Search Engine Architecture
+
+A search engine architecture consists of several components: the crawler that fetches web pages, the indexer that builds the inverted index, the query processor that handles user queries, and the ranker that orders results by relevance. Additional components include a cache for frequently accessed data and a front-end for user interaction.

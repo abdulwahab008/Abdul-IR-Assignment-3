@@ -1,0 +1,3 @@
+Introduction to Information Retrieval
+
+Information retrieval (IR) is the science of searching for information in documents, searching for documents themselves, and also searching for metadata that describes data. Information retrieval systems are used to reduce information overload and help users find the information they need. Modern IR systems use advanced algorithms like TF-IDF and BM25 for ranking documents.

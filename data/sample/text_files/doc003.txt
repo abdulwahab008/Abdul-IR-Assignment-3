@@ -1,0 +1,3 @@
+TF-IDF Weighting Scheme
+
+Term Frequency-Inverse Document Frequency (TF-IDF) is a numerical statistic used to reflect the importance of a word in a document within a collection. The TF-IDF value increases proportionally with the number of times a word appears in a document but is offset by the frequency of the word in the corpus. This helps to adjust for the fact that some words appear more frequently in general.

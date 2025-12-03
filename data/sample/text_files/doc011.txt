@@ -1,0 +1,3 @@
+Machine Learning in Information Retrieval
+
+Machine learning has transformed information retrieval. Learning to rank algorithms use machine learning to improve search ranking. Neural networks and deep learning models like BERT can understand semantic meaning. These models can capture complex patterns that traditional IR models cannot, leading to more relevant search results.

@@ -1,0 +1,3 @@
+Document Clustering and Classification
+
+Document clustering groups similar documents together without predefined categories. Document classification assigns documents to predefined categories. Both techniques are useful for organizing large document collections. Common algorithms include k-means clustering and naive Bayes classification. These techniques help users navigate large document collections.

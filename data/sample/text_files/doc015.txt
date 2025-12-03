@@ -1,0 +1,3 @@
+Web Crawling and Indexing
+
+Web crawlers are programs that systematically browse the World Wide Web to collect web pages. Crawlers start with a set of seed URLs and follow links to discover new pages. The fetched pages are then processed and added to the search engine index. Crawlers must be polite and respect robots.txt files that specify crawling rules.

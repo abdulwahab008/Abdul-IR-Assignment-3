@@ -1,0 +1,3 @@
+Text Preprocessing Techniques
+
+Text preprocessing is a crucial step in natural language processing and information retrieval. Common techniques include tokenization, which splits text into words or tokens. Stemming reduces words to their root form, while lemmatization converts words to their dictionary form. Stop word removal eliminates common words that carry little meaning.

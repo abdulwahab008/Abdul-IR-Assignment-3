@@ -1,0 +1,3 @@
+Vector Space Model
+
+The vector space model represents documents and queries as vectors in a high-dimensional space. Each dimension corresponds to a term in the vocabulary. Document similarity is computed using cosine similarity. This model allows for ranking documents by their degree of similarity to the query rather than just Boolean matching.

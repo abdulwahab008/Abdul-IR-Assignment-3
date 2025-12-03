@@ -1,0 +1,3 @@
+PageRank Algorithm
+
+PageRank is an algorithm used by Google Search to rank web pages in search engine results. It works by counting the number and quality of links to a page to determine its importance. The underlying assumption is that more important websites receive more links. PageRank revolutionized web search by considering link structure.

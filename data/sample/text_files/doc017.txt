@@ -1,0 +1,3 @@
+Text Similarity Measures
+
+Text similarity measures quantify how similar two pieces of text are. Cosine similarity measures the angle between document vectors. Jaccard similarity measures the overlap of term sets. Edit distance measures the minimum number of edits to transform one string to another. These measures are fundamental to information retrieval and text mining.

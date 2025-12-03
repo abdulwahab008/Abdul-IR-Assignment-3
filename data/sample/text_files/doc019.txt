@@ -1,0 +1,3 @@
+Cross-Language Information Retrieval
+
+Cross-language information retrieval (CLIR) enables users to search documents in languages different from the query language. CLIR systems use translation techniques to bridge the language gap. Approaches include query translation, document translation, and using multilingual representations. CLIR is essential for accessing global information resources.

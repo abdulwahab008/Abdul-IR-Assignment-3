@@ -1,0 +1,3 @@
+Relevance Feedback Mechanisms
+
+Relevance feedback is a technique used to improve search results based on user feedback. Users mark documents as relevant or non-relevant, and the system uses this information to refine the query. Pseudo-relevance feedback assumes top-ranked documents are relevant and uses them automatically. Relevance feedback can significantly improve retrieval effectiveness.

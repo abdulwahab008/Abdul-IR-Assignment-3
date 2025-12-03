@@ -1,0 +1,3 @@
+Evaluation Metrics for IR Systems
+
+Information retrieval systems are evaluated using various metrics. Precision measures the fraction of retrieved documents that are relevant. Recall measures the fraction of relevant documents that are retrieved. F1 score is the harmonic mean of precision and recall. Mean Average Precision (MAP) and Normalized Discounted Cumulative Gain (NDCG) are popular ranking metrics.

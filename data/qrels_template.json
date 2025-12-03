@@ -1,0 +1,23 @@
+# Relevance Judgments for News Articles Dataset
+# 
+# NOTE: These are placeholder relevance judgments.
+# After building the index and running initial queries, you should:
+# 1. Run each query and manually review the top results
+# 2. Identify which documents are truly relevant
+# 3. Update this file with actual relevant document IDs
+#
+# Format: query_id -> list of relevant document IDs
+# Document IDs follow the pattern: news_XXXXX (e.g., news_00001, news_00150)
+
+{
+    "q1": [],
+    "q2": [],
+    "q3": [],
+    "q4": [],
+    "q5": [],
+    "q6": [],
+    "q7": [],
+    "q8": [],
+    "q9": [],
+    "q10": []
+}

@@ -1,0 +1,3 @@
+Natural Language Processing Basics
+
+Natural language processing (NLP) is a field of artificial intelligence that deals with the interaction between computers and humans using natural language. NLP techniques are used in information retrieval for query understanding, document analysis, and semantic matching. Common NLP tasks include named entity recognition, part-of-speech tagging, and sentiment analysis.

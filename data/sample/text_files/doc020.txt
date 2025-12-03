@@ -1,0 +1,3 @@
+Question Answering Systems
+
+Question answering systems return direct answers to natural language questions instead of document lists. These systems combine information retrieval with natural language understanding. Modern QA systems use deep learning models to extract answers from text passages. QA systems are increasingly used in virtual assistants and search engines.

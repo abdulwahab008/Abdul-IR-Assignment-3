@@ -1,0 +1,102 @@
+[
+  {
+    "id": "doc001",
+    "title": "Introduction to Information Retrieval",
+    "content": "Information retrieval (IR) is the science of searching for information in documents, searching for documents themselves, and also searching for metadata that describes data. Information retrieval systems are used to reduce information overload and help users find the information they need. Modern IR systems use advanced algorithms like TF-IDF and BM25 for ranking documents."
+  },
+  {
+    "id": "doc002",
+    "title": "Text Preprocessing Techniques",
+    "content": "Text preprocessing is a crucial step in natural language processing and information retrieval. Common techniques include tokenization, which splits text into words or tokens. Stemming reduces words to their root form, while lemmatization converts words to their dictionary form. Stop word removal eliminates common words that carry little meaning."
+  },
+  {
+    "id": "doc003",
+    "title": "TF-IDF Weighting Scheme",
+    "content": "Term Frequency-Inverse Document Frequency (TF-IDF) is a numerical statistic used to reflect the importance of a word in a document within a collection. The TF-IDF value increases proportionally with the number of times a word appears in a document but is offset by the frequency of the word in the corpus. This helps to adjust for the fact that some words appear more frequently in general."
+  },
+  {
+    "id": "doc004",
+    "title": "BM25 Ranking Algorithm",
+    "content": "BM25 (Best Matching 25) is a probabilistic retrieval model used by search engines to rank matching documents according to their relevance to a given query. BM25 is a bag-of-words retrieval function that ranks documents based on query terms appearing in each document. It incorporates term frequency saturation and document length normalization."
+  },
+  {
+    "id": "doc005",
+    "title": "Boolean Retrieval Model",
+    "content": "The Boolean retrieval model is an information retrieval model in which queries are specified using Boolean operators AND, OR, and NOT. Documents are retrieved if they satisfy the Boolean expression. This model is precise but does not support ranking. Boolean retrieval was one of the first information retrieval models developed."
+  },
+  {
+    "id": "doc006",
+    "title": "Inverted Index Data Structure",
+    "content": "An inverted index is a database index storing a mapping from content to its locations in a table or document. The inverted index is the most popular data structure used in information retrieval systems. It contains a dictionary of terms and for each term, a postings list that records which documents the term occurs in."
+  },
+  {
+    "id": "doc007",
+    "title": "Query Processing in Search Engines",
+    "content": "Query processing involves analyzing and transforming a user query into a form that can be matched against the index. Steps include parsing the query, applying the same preprocessing as documents, expanding queries with synonyms, and formulating the retrieval model query. Efficient query processing is crucial for search engine performance."
+  },
+  {
+    "id": "doc008",
+    "title": "Evaluation Metrics for IR Systems",
+    "content": "Information retrieval systems are evaluated using various metrics. Precision measures the fraction of retrieved documents that are relevant. Recall measures the fraction of relevant documents that are retrieved. F1 score is the harmonic mean of precision and recall. Mean Average Precision (MAP) and Normalized Discounted Cumulative Gain (NDCG) are popular ranking metrics."
+  },
+  {
+    "id": "doc009",
+    "title": "Vector Space Model",
+    "content": "The vector space model represents documents and queries as vectors in a high-dimensional space. Each dimension corresponds to a term in the vocabulary. Document similarity is computed using cosine similarity. This model allows for ranking documents by their degree of similarity to the query rather than just Boolean matching."
+  },
+  {
+    "id": "doc010",
+    "title": "Search Engine Architecture",
+    "content": "A search engine architecture consists of several components: the crawler that fetches web pages, the indexer that builds the inverted index, the query processor that handles user queries, and the ranker that orders results by relevance. Additional components include a cache for frequently accessed data and a front-end for user interaction."
+  },
+  {
+    "id": "doc011",
+    "title": "Machine Learning in Information Retrieval",
+    "content": "Machine learning has transformed information retrieval. Learning to rank algorithms use machine learning to improve search ranking. Neural networks and deep learning models like BERT can understand semantic meaning. These models can capture complex patterns that traditional IR models cannot, leading to more relevant search results."
+  },
+  {
+    "id": "doc012",
+    "title": "Natural Language Processing Basics",
+    "content": "Natural language processing (NLP) is a field of artificial intelligence that deals with the interaction between computers and humans using natural language. NLP techniques are used in information retrieval for query understanding, document analysis, and semantic matching. Common NLP tasks include named entity recognition, part-of-speech tagging, and sentiment analysis."
+  },
+  {
+    "id": "doc013",
+    "title": "Document Clustering and Classification",
+    "content": "Document clustering groups similar documents together without predefined categories. Document classification assigns documents to predefined categories. Both techniques are useful for organizing large document collections. Common algorithms include k-means clustering and naive Bayes classification. These techniques help users navigate large document collections."
+  },
+  {
+    "id": "doc014",
+    "title": "Relevance Feedback Mechanisms",
+    "content": "Relevance feedback is a technique used to improve search results based on user feedback. Users mark documents as relevant or non-relevant, and the system uses this information to refine the query. Pseudo-relevance feedback assumes top-ranked documents are relevant and uses them automatically. Relevance feedback can significantly improve retrieval effectiveness."
+  },
+  {
+    "id": "doc015",
+    "title": "Web Crawling and Indexing",
+    "content": "Web crawlers are programs that systematically browse the World Wide Web to collect web pages. Crawlers start with a set of seed URLs and follow links to discover new pages. The fetched pages are then processed and added to the search engine index. Crawlers must be polite and respect robots.txt files that specify crawling rules."
+  },
+  {
+    "id": "doc016",
+    "title": "PageRank Algorithm",
+    "content": "PageRank is an algorithm used by Google Search to rank web pages in search engine results. It works by counting the number and quality of links to a page to determine its importance. The underlying assumption is that more important websites receive more links. PageRank revolutionized web search by considering link structure."
+  },
+  {
+    "id": "doc017",
+    "title": "Text Similarity Measures",
+    "content": "Text similarity measures quantify how similar two pieces of text are. Cosine similarity measures the angle between document vectors. Jaccard similarity measures the overlap of term sets. Edit distance measures the minimum number of edits to transform one string to another. These measures are fundamental to information retrieval and text mining."
+  },
+  {
+    "id": "doc018",
+    "title": "Semantic Search Technology",
+    "content": "Semantic search improves search accuracy by understanding the meaning behind queries and documents. Unlike keyword-based search, semantic search considers context, synonyms, and user intent. Technologies like word embeddings and knowledge graphs enable semantic understanding. Semantic search delivers more relevant results for complex queries."
+  },
+  {
+    "id": "doc019",
+    "title": "Cross-Language Information Retrieval",
+    "content": "Cross-language information retrieval (CLIR) enables users to search documents in languages different from the query language. CLIR systems use translation techniques to bridge the language gap. Approaches include query translation, document translation, and using multilingual representations. CLIR is essential for accessing global information resources."
+  },
+  {
+    "id": "doc020",
+    "title": "Question Answering Systems",
+    "content": "Question answering systems return direct answers to natural language questions instead of document lists. These systems combine information retrieval with natural language understanding. Modern QA systems use deep learning models to extract answers from text passages. QA systems are increasingly used in virtual assistants and search engines."
+  }
+]

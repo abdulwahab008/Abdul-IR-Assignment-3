@@ -1,0 +1,3 @@
+Semantic Search Technology
+
+Semantic search improves search accuracy by understanding the meaning behind queries and documents. Unlike keyword-based search, semantic search considers context, synonyms, and user intent. Technologies like word embeddings and knowledge graphs enable semantic understanding. Semantic search delivers more relevant results for complex queries.
