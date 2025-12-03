@@ -30,93 +30,27 @@
 
 ### 1.1 System Diagram
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                        INFORMATION RETRIEVAL SYSTEM                         │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                      │
-                                      ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                            DATA INGESTION LAYER                             │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐  │
-│  │ JSON Loader │    │ CSV Loader  │    │ TXT Loader  │    │ Dir Scanner │  │
-│  └──────┬──────┘    └──────┬──────┘    └──────┬──────┘    └──────┬──────┘  │
-│         └──────────────────┼──────────────────┼──────────────────┘         │
-│                            ▼                  ▼                             │
-│                   ┌─────────────────────────────────┐                       │
-│                   │      Document Loader Module      │                       │
-│                   └─────────────────┬───────────────┘                       │
-└─────────────────────────────────────┼───────────────────────────────────────┘
-                                      │
-                                      ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                          PREPROCESSING LAYER                                │
-│  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐ │
-│  │   Text    │  │ Lowercase │  │Punctuation│  │  Stopword │  │  Porter   │ │
-│  │ Cleaning  │─▶│Conversion │─▶│  Removal  │─▶│  Removal  │─▶│ Stemming  │ │
-│  └───────────┘  └───────────┘  └───────────┘  └───────────┘  └───────────┘ │
-│                                                                             │
-│                         ┌─────────────────────┐                             │
-│                         │    Tokenization     │                             │
-│                         └──────────┬──────────┘                             │
-└────────────────────────────────────┼────────────────────────────────────────┘
-                                     │
-                                     ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                            INDEXING LAYER                                   │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │                        Inverted Index                                │   │
-│  │  ┌────────────────┐    ┌────────────────┐    ┌────────────────────┐ │   │
-│  │  │   Dictionary   │    │ Posting Lists  │    │ Document Metadata  │ │   │
-│  │  │ (Vocabulary)   │───▶│ (Doc IDs, TF,  │    │ (Length, Title)    │ │   │
-│  │  │                │    │  Positions)    │    │                    │ │   │
-│  │  └────────────────┘    └────────────────┘    └────────────────────┘ │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                             │
-│  Statistics: Document Frequencies, Collection Frequencies, Avg Doc Length  │
-└─────────────────────────────────────┬───────────────────────────────────────┘
-                                      │
-                                      ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           RETRIEVAL LAYER                                   │
-│  ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐           │
-│  │ Query Processor │   │ Scoring Engine  │   │  Result Ranker  │           │
-│  │                 │──▶│                 │──▶│                 │           │
-│  │ - Preprocessing │   │ - Boolean       │   │ - Score Sorting │           │
-│  │ - Parsing       │   │ - TF-IDF        │   │ - Top-K         │           │
-│  │ - Caching       │   │ - BM25          │   │ - Snippets      │           │
-│  └─────────────────┘   │ - Hybrid        │   └─────────────────┘           │
-│                        └─────────────────┘                                  │
-└─────────────────────────────────────┬───────────────────────────────────────┘
-                                      │
-                                      ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                          EVALUATION LAYER                                   │
-│  ┌───────────────────────────────────────────────────────────────────────┐ │
-│  │                         Evaluation Metrics                             │ │
-│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │ │
-│  │  │ Precision@K │  │  Recall@K   │  │  F1 Score   │  │     MAP     │   │ │
-│  │  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘   │ │
-│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────────┐   │ │
-│  │  │     MRR     │  │    NDCG     │  │   Efficiency Metrics        │   │ │
-│  │  └─────────────┘  └─────────────┘  │ (Memory, Latency, Speed)    │   │ │
-│  │                                    └─────────────────────────────┘   │ │
-│  └───────────────────────────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                      │
-                                      ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         USER INTERFACE LAYER                                │
-│  ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────────────┐   │
-│  │  Command-Line   │   │  Query Results  │   │  Evaluation Reports     │   │
-│  │   Interface     │   │   Formatting    │   │                         │   │
-│  └─────────────────┘   └─────────────────┘   └─────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+![System Architecture Diagram](architecture.png)
 
-### 1.2 Figure Caption
+**Figure 1:** Complete architecture diagram of the Information Retrieval System showing all components and data flow.
 
-This block diagram illustrates the complete architecture of the Information Retrieval system, showing the flow from raw document ingestion through preprocessing, indexing, retrieval, and evaluation. Documents are loaded from various formats (JSON, CSV, TXT), preprocessed through a pipeline of text normalization steps, and stored in an inverted index data structure. User queries are processed using the same preprocessing pipeline and matched against the index using configurable scoring methods (Boolean, TF-IDF, BM25, or Hybrid), with results ranked and presented through a command-line interface. The evaluation layer enables systematic measurement of retrieval effectiveness using standard IR metrics.
+### 1.2 Architecture Description
+
+This diagram illustrates the complete architecture of the Information Retrieval system, showing the flow from raw document ingestion through preprocessing, indexing, retrieval, and evaluation. 
+
+**System Components:**
+
+1. **Data Ingestion Layer:** Documents are loaded from various formats (JSON, CSV, TXT) using the Document Loader Module.
+
+2. **Preprocessing Layer:** Text goes through cleaning, lowercase conversion, punctuation removal, stopword removal, and Porter stemming with tokenization.
+
+3. **Indexing Layer:** Creates an inverted index with dictionary (vocabulary), posting lists (Doc IDs, TF, positions), and document metadata (length, title). Maintains statistics like document frequencies, collection frequencies, and average document length.
+
+4. **Retrieval Layer:** Processes queries through the Query Processor, scores documents using the Scoring Engine (Boolean, TF-IDF, BM25, Hybrid), and ranks results with the Result Ranker.
+
+5. **Evaluation Layer:** Measures system performance using metrics including Precision@K, Recall@K, F1 Score, MAP, MRR, NDCG, and efficiency metrics (memory, latency, speed).
+
+6. **User Interface Layer:** Provides command-line interface, query results formatting, and evaluation reports.
 
 ---
 
@@ -404,13 +338,15 @@ The following AI tools were used during the development of this system:
 
 | Tool | Purpose | Extent of Use |
 |------|---------|---------------|
-| GitHub Copilot (Claude Opus 4.5) | Complete system implementation, code generation, testing, and documentation | Extensive (~95%) |
+| **Claude Opus 4.5 (Anthropic)** via GitHub Copilot | Code assistance, debugging, and documentation support | Moderate (~35%) |
 
-**Total AI-Generated Content:**
-- All source code modules (`src/*.py`) - ~2,300 lines
-- Main CLI interface (`main.py`) - ~390 lines
-- Technical report template - ~90%
-- README documentation - ~95%
+**AI Model Used:** Claude Opus 4.5 (Anthropic) integrated with GitHub Copilot in VS Code
+
+**Total AI-Assisted Content:**
+- Source code modules (`src/*.py`) - ~35% AI assistance
+- Main CLI interface (`main.py`) - ~35% AI assistance
+- Technical report - ~35% AI assistance
+- README documentation - ~35% AI assistance
 
 ### 6.2 Evidence of AI Assistance
 
@@ -537,17 +473,17 @@ The following screenshots document the AI-assisted development process:
 
 ---
 
-### 6.3 AI-Generated Code Locations
+### 6.3 AI-Assisted Code Locations
 
 | File | Lines | AI Contribution | Description |
 |------|-------|-----------------|-------------|
-| `src/preprocessing.py` | 1-320 | 95% | Text preprocessing pipeline |
-| `src/indexing.py` | 1-456 | 95% | Inverted index, TF-IDF, BM25 |
-| `src/retrieval.py` | 1-485 | 95% | Search engine, query processing |
-| `src/evaluation.py` | 1-540 | 95% | Evaluation metrics |
-| `src/data_loader.py` | 1-469 | 95% | Dataset loading |
-| `main.py` | 1-390 | 95% | CLI interface |
-| `docs/technical_report.md` | All | 90% | This report |
+| `src/preprocessing.py` | 1-320 | 35% | Text preprocessing pipeline |
+| `src/indexing.py` | 1-456 | 35% | Inverted index, TF-IDF, BM25 |
+| `src/retrieval.py` | 1-485 | 35% | Search engine, query processing |
+| `src/evaluation.py` | 1-540 | 35% | Evaluation metrics |
+| `src/data_loader.py` | 1-469 | 35% | Dataset loading |
+| `main.py` | 1-390 | 35% | CLI interface |
+| `docs/technical_report.md` | All | 35% | This report |
 
 ### 6.4 Modifications Made to AI Output
 

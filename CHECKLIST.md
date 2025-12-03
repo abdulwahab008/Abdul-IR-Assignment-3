@@ -89,21 +89,21 @@ python main.py --interactive --index-path ./index.pkl
 #### 3.6 AI Disclosure
 | Requirement | Status | Location in Report |
 |-------------|--------|-------------------|
-| Summary of AI tools used | ✅ TEMPLATE | Section 6.1 |
-| Screenshots of prompts | ⚠️ NEEDED | Section 6.2 (add yours) |
-| Location in code indicated | ⚠️ NEEDED | Section 6.2 (add yours) |
-| Modifications explained | ⚠️ NEEDED | Section 6.2 (add yours) |
+| Summary of AI tools used | ✅ DONE | Section 6.1 |
+| Screenshots of prompts | ✅ DONE | Section 6.2 (17 screenshots) |
+| Location in code indicated | ✅ DONE | Section 6.3 |
+| Modifications explained | ✅ DONE | Section 6.4 |
 
 ---
 
 ### 4. Submission Requirements
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| Single PDF report | ⚠️ TO DO | Convert `docs/technical_report.md` to PDF |
-| GitHub repository | ⚠️ TO DO | Push all code to GitHub |
+| Single PDF report | ✅ DONE | `docs/technical_report.pdf` (7.4 MB) |
+| GitHub repository | ✅ DONE | https://github.com/abdulwahab008/Abdul-IR-Assignment-3 |
 | README with instructions | ✅ DONE | `README.md` |
 | Configuration files | ✅ DONE | `requirements.txt` |
-| AI screenshots in PDF | ⚠️ TO DO | Add to Section 6 |
+| AI screenshots in PDF | ✅ DONE | 17 screenshots in Section 6.2 |
 
 ---
 
@@ -115,7 +115,7 @@ IR assignment/
 ├── requirements.txt           ✅ Dependencies
 ├── README.md                  ✅ Setup instructions
 ├── create_qrels.py            ✅ Relevance judgment helper
-├── index.pkl                  ✅ Saved index (after build)
+├── index.pkl                  ✅ Saved index
 ├── src/
 │   ├── __init__.py           ✅ Package init
 │   ├── preprocessing.py       ✅ Text preprocessing
@@ -124,63 +124,57 @@ IR assignment/
 │   ├── evaluation.py         ✅ Evaluation metrics
 │   └── data_loader.py        ✅ Dataset loading
 ├── data/
-│   ├── Articles.csv          ⚠️ Download from Kaggle
-│   ├── queries.json          ✅ Test queries
-│   └── qrels.json            ⚠️ Create after testing
+│   ├── Articles.csv          ✅ Kaggle News Articles (2,692)
+│   ├── queries.json          ✅ Test queries (10)
+│   └── qrels.json            ✅ Relevance judgments
 └── docs/
-    └── technical_report.md   ✅ Report template
+    ├── technical_report.md   ✅ Report (Markdown)
+    ├── technical_report.pdf  ✅ Report (PDF with images)
+    ├── architecture.png      ✅ System architecture diagram
+    └── ai_screenshots/       ✅ 17 AI usage screenshots
 ```
 
 ---
 
-## ⚠️ ACTIONS NEEDED BEFORE SUBMISSION
+## ✅ ALL ACTIONS COMPLETED
 
-### 1. Download Dataset
-```bash
-# Download from: https://www.kaggle.com/datasets/asad1m9a9h6mood/news-articles
-# Move to data/ folder:
-mv ~/Downloads/archive/Articles.csv ./data/
-```
+### 1. Dataset ✅
+- Downloaded from Kaggle: https://www.kaggle.com/datasets/asad1m9a9h6mood/news-articles
+- Located at: `data/Articles.csv`
+- 2,692 articles indexed
 
-### 2. Build Index and Test
+### 2. Index Built ✅
 ```bash
-source venv/bin/activate
 python main.py --build-index --data-path ./data/Articles.csv --save-index
-python main.py --interactive --index-path ./index.pkl
+# Result: index.pkl created (19,411 vocabulary terms)
 ```
 
-### 3. Create Relevance Judgments
+### 3. Testing Complete ✅
 ```bash
-python create_qrels.py --auto --index-path ./index.pkl --output ./data/qrels.json
+python main.py --interactive --index-path ./index.pkl
+# All methods tested: BM25, TF-IDF, Boolean, Hybrid
 ```
 
-### 4. Run Evaluation
+### 4. Evaluation Complete ✅
 ```bash
 python main.py --evaluate --queries ./data/queries.json --qrels ./data/qrels.json
+# BM25: Precision=0.96, Recall=1.00, MAP=1.00, NDCG=1.00
 ```
 
-### 5. Add AI Disclosure Screenshots
-- Take screenshots of this conversation
-- Add to `docs/ai_screenshots/` folder
-- Reference in Section 6.2 of the report
+### 5. AI Disclosure Screenshots ✅
+- 17 screenshots added to `docs/ai_screenshots/`
+- All referenced in Section 6.2 of technical report
 
-### 6. Convert Report to PDF
+### 6. PDF Report Generated ✅
 ```bash
-# Option 1: Use pandoc
-pandoc docs/technical_report.md -o docs/technical_report.pdf
-
-# Option 2: Use VS Code Markdown Preview and print to PDF
-
-# Option 3: Use online converter like markdowntopdf.com
+pandoc docs/technical_report.md -o docs/technical_report.pdf --pdf-engine=pdflatex
+# Result: technical_report.pdf (7.4 MB with all images)
 ```
 
-### 7. Push to GitHub
+### 7. GitHub Repository ✅
 ```bash
-git init
-git add .
-git commit -m "CS516 HW3 - Information Retrieval System"
-git remote add origin <your-repo-url>
-git push -u origin main
+git push origin main
+# Repository: https://github.com/abdulwahab008/Abdul-IR-Assignment-3
 ```
 
 ---
