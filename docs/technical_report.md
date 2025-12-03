@@ -592,7 +592,7 @@ python main.py --evaluate --queries ./data/queries.json --qrels ./data/qrels.jso
 
 ## Appendix B: Code Repository
 
-**GitHub Repository:** https://github.com/abdulwahab/Abdul-IR-Assignment-3
+**GitHub Repository:** https://github.com/abdulwahab008/Abdul-IR-Assignment-3
 
 The repository includes:
 - Complete source code (`src/` folder)
